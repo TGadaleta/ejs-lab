@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%=category%></title>
+  </head>
+  <body>
+    <%- include('./partials/nav') %>
+    <h1><%=category%></h1>
+    <% filterDishes.forEach( dish => {%>
+    <h4><%=dish.name%><%= dish.rating === 5 ? '⭐' : '' %></h4>
+    <p><%=dish.details%></p>
+    <p><%=dish.rating%>/5                  $<%=dish.price%></p>
+    <% }); %>
+  </body>
+</html>
